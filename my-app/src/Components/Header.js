@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
 class Header extends Component {
     constructor(props) {
@@ -22,18 +22,27 @@ class Header extends Component {
 
 
     render() {
-        const style = { height: 70 };
+        let optionTime = {
+            hour: 'numeric', minute: 'numeric', second: 'numeric',
+            hour12: false
+        }
         return (
-            <div className="container-fluid">
+            <div className="container-fluid title">
                 <div className="row">
-                    <div className="col-8">
-                        <h1><img style={style} src="/images/logo/logo.png" alt="" /> <span className="text-uccess">เฮลตี้ คาเฟ่</span> </h1>
+                    <div className="col-8" style={{}}>
+                        <div>
+                            <h2 style={{ borderLeft: "4px solid red", height: "100%", paddingLeft:"10px"}} className="mt-2">
+                                Else<br />
+                                Society
+                            </h2> 
+                        </div>
                     </div>
-                    <div className="col-4 text-right">
-                        <h5 className="text-muted mt-4">
-                            {this.state.date.toLocaleTimeString()}
-                        </h5>
-                        <ul className="list-inline">
+                    <div className="col-4 text-center mt-2">
+
+                        <h2 className="text-right">
+                            {this.state.date.toLocaleTimeString('default', optionTime)}
+                        </h2>
+                        <ul className="list-inline text-right">
                             <li className="list-inline-item title"><Link to="/">หน้าหลัก</Link></li>
                             <li className="list-inline-item title">|</li>
                             <li className="list-inline-item title"><Link to="/orders">รายการสั่งซื้อ</Link></li>
@@ -43,9 +52,10 @@ class Header extends Component {
                             <li className="list-inline-item title"><Link to="/about">เกี่ยวกับเรา</Link></li>
                             <li className="list-inline-item title">|</li>
                         </ul>
+
                     </div>
                 </div>
-                <hr />
+
             </div>
         )
     }
