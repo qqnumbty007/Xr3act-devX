@@ -7,7 +7,9 @@ function Home() {
   return (
     <div>
       <Header />
+        <hr />
         <Monitor />
+        <hr />
       <Footer email="test@jsk.net" company="SK8" />
     </div>
   )

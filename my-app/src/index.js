@@ -13,7 +13,7 @@ const TestFunctionComponent = () => {
             </h1>
         </div>
     )
-}
+} // test Function Component
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
