@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
+import HeaderLogo from './HeaderLogo';
 
 class Header extends Component {
     constructor(props) {
@@ -30,12 +31,9 @@ class Header extends Component {
             <div className="container-fluid title">
                 <div className="row">
                     <div className="col-8" style={{}}>
-                        <div>
-                            <h2 style={{ borderLeft: "4px solid red", height: "100%", paddingLeft:"10px"}} className="mt-2">
-                                Else<br />
-                                Society
-                            </h2> 
-                        </div>
+                        <h1>
+                           <HeaderLogo />
+                        </h1>
                     </div>
                     <div className="col-4 text-center mt-2">
 

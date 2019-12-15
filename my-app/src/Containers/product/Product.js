@@ -1,41 +1,41 @@
 import React, { Component } from 'react';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
-import ProductList from '../../components/product/ProductList';
-// import axios from 'axios';
-import { withRouter } from 'react-router-dom';
-import { connect } from 'react-redux';
-import { productsFetch, productDelete } from '../../actions'
+import Header from '../../Components/Header';
+import Footer from '../../Components/Footer';
+import ProductList from '../../Components/Product/ProductList'
+import axios from 'axios';
+// import { withRouter } from 'react-router-dom';
+// import { connect } from 'react-redux';
+// import { productsFetch, productDelete } from '../../actions'
 
 class Product extends Component {
     constructor(props) {
         super(props);
         // this.state = { products: null };
-        this.delProduct = this.delProduct.bind(this);
-        this.editProduct = this.editProduct.bind(this);
+        // this.delProduct = this.delProduct.bind(this);
+        // this.editProduct = this.editProduct.bind(this);
     }
 
     componentDidMount() {
-        // axios.get("http://localhost:3001/products").then(res => {
-        //     this.setState({ products: res.data })
-        // })
-        this.props.productsFetch();
+        axios.get("http://localhost:3001/products").then(res => {
+            this.setState({ products: res.data })
+        })
+        // this.props.productsFetch();
     }
 
     editProduct(product) {
         // console.log(product);
-        this.props.history.push('products/edit/' + product.id)
+        // this.props.history.push('products/edit/' + product.id)
     }
 
     delProduct(product) {
-        // axios.delete("http://localhost:3001/products/" + product.id ).then(res => {
-        //     axios.get("http://localhost:3001/products").then(
-        //         res => {
-        //             this.setState({products : res.data});
-        //         }
-        //     )
-        // })
-        this.props.productDelete(product.id);
+        axios.delete("http://localhost:3001/products/" + product.id ).then(res => {
+            axios.get("http://localhost:3001/products").then(
+                res => {
+                    this.setState({products : res.data});
+                }
+            )
+        })
+        // this.props.productDelete(product.id);
     }
     render() {
         return (
@@ -64,8 +64,5 @@ class Product extends Component {
     }
 }
 
-function mapStateToProps({ products }) {
-    return { products };
-};
 
-export default withRouter(connect(mapStateToProps, { productsFetch, productDelete })(Product));
+export default Product;
