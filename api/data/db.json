@@ -1,0 +1,101 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "productName": "สลัดผัก",
+        "unitPrice": "120",
+        "thumbnail": "/images/product/1.jpg"
+      },
+      {
+        "id": 2,
+        "productName": "ไก่ทอด",
+        "unitPrice": "90",
+        "thumbnail": "/images/product/2.jpg"
+      },
+      {
+        "id": 4,
+        "productName": "เฟรนฟราย",
+        "unitPrice": "150",
+        "thumbnail": "/images/product/4.jpg"
+      },
+      {
+        "id": 5,
+        "productName": "เค้ก 3 ชั้น",
+        "unitPrice": "200",
+        "thumbnail": "/images/product/5.jpg"
+      },
+      {
+        "id": 6,
+        "productName": "กาแฟ เฮลตี้ฟู้ด",
+        "unitPrice": "140",
+        "thumbnail": "/images/product/6.jpg"
+      },
+      {
+        "productName": "ไก่ทอด V.2",
+        "unitPrice": "140",
+        "thumbnail": "/images/product/2.jpg",
+        "id": 7
+      }
+    ],
+    "orders": [
+      {
+        "orderedDate": "2019-10-16T16:37:00.196Z",
+        "totalPrice": 430,
+        "orders": [
+          {
+            "product": {
+              "id": 4,
+              "productName": "เฟรนฟราย",
+              "unitPrice": "140",
+              "thumbnail": "/images/product/4.jpg"
+            },
+            "quantity": 1
+          },
+          {
+            "product": {
+              "id": 5,
+              "productName": "เค้ก 3 ชั้น",
+              "unitPrice": "200",
+              "thumbnail": "/images/product/5.jpg"
+            },
+            "quantity": 1
+          },
+          {
+            "product": {
+              "id": 2,
+              "productName": "ไก่ทอด",
+              "unitPrice": "90",
+              "thumbnail": "/images/product/2.jpg"
+            },
+            "quantity": 1
+          }
+        ],
+        "id": 5
+      },
+      {
+        "orderedDate": "2019-10-26T16:35:36.211Z",
+        "totalPrice": 340,
+        "orders": [
+          {
+            "product": {
+              "id": 5,
+              "productName": "เค้ก 3 ชั้น",
+              "unitPrice": "200",
+              "thumbnail": "/images/product/5.jpg"
+            },
+            "quantity": 1
+          },
+          {
+            "product": {
+              "id": 4,
+              "productName": "เฟรนฟราย",
+              "unitPrice": "140",
+              "thumbnail": "/images/product/4.jpg"
+            },
+            "quantity": 1
+          }
+        ],
+        "id": 6
+      }
+    ]
+  }
